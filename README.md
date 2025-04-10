@@ -122,12 +122,4 @@ See the [LICENSE](./LICENSE) file for more details.
 
 ---
 
-### See also
-- 📦 [Redux Toolkit for scalable app architecture](https://www.google.com/search?q=redux+toolkit+for+large+react+apps)
-- 🌀 [Tailwind CSS responsive e-commerce UI patterns](https://www.google.com/search?q=tailwind+css+ecommerce+ui+examples)
-- ⚡ [Vite vs CRA performance benefits](https://www.google.com/search?q=vite+vs+create+react+app+performance+comparison)
 
-### You may also enjoy
-- 📈 [Add Stripe or Razorpay integration](https://www.google.com/search?q=react+ecommerce+with+stripe+integration)
-- 🛎️ [Add toast notifications with React Toastify](https://www.google.com/search?q=react+toastify+cart+notifications)
-- 🔍 [Implement full-text search with Fuse.js](https://www.google.com/search?q=react+fuzzy+search+fuse+js) – for more intelligent search filters
