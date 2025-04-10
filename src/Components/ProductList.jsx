@@ -1,6 +1,25 @@
 import React from 'react'
+import { FaSquarePlus } from "react-icons/fa6";
+import { FaSquareMinus } from "react-icons/fa6";
+import { useDispatch , useSelector } from 'react-redux';
+import { action } from './redux/slices/cartslice';  
+
+
+
 
 export default function ProductList(props) {
+  const cartProducts = useSelector((store)=>{return store.cartReducer.cartProducts})
+  const dispatch = useDispatch()
+  
+   const handleAddProduct = (product) => {
+    dispatch(action.addToCart(product))
+
+  }
+  const handleDeleteProduct = (product) => {
+    dispatch(action.deleteFromCart(product))
+
+  }
+
     const {filteredGroupedProducts}=props;
   return (
     <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 p-4'>
@@ -25,9 +44,15 @@ export default function ProductList(props) {
           </p>
           <div className="mt-auto">
             <p className='text-gray-600'>${product.price}</p>
-            <button className="mt-2 w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition-colors">
-              Add to Cart
-            </button>
+          </div>
+          <div className='flex flex-row items-center text-center mt-4'>
+              <FaSquareMinus onClick={()=>handleDeleteProduct(product)}></FaSquareMinus>
+              <div className='text-gray-600 m-2'>
+                  {cartProducts.find(p => p.id === product.id)?.quantity || 0}
+              </div>
+              <FaSquarePlus onClick={() => handleAddProduct(product)}></FaSquarePlus>
+              
+              
           </div>
         </div>
       </div>
@@ -35,4 +60,5 @@ export default function ProductList(props) {
   )}
 </div>
   )
+  
 }

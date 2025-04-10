@@ -1,11 +1,11 @@
 import React, { use, useEffect } from 'react'
 import { useState } from 'react';
-import Categories from './Categories';
-import ProductList from './ProductList';
+import Categories from '../Components/Categories';
+import ProductList from '../Components/ProductList';
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
-import basicOps from './Utility/bsicOps';
-import { usePaginationContext } from './Contexts/PaginationProvider';
+import basicOps from '../Utility/bsicOps';
+import { usePaginationContext } from '../Contexts/PaginationProvider';
 
 function Home() {
     const [searchTerm, setSearchTerm] = useState("");

@@ -1,13 +1,13 @@
 import { useState } from 'react'
 import './App.css'
 import Navbar from './Components/Navbar'
-import Home from './Components/Home'
-import User from './Components/User'
-import Cart from './Components/Cart'
+import Home from './pages/Home'
+import User from './pages/User'
+import Cart from './pages/Cart'
 import ProductDetails from './Components/ProductDetails'
 import PageNotFound from './Components/PageNotFound'
 import { Routes, Route, Navigate } from 'react-router-dom'
-import PaginationContext from './Components/Contexts/PaginationProvider'
+import PaginationContext from './Contexts/PaginationProvider'
 
 function App() {
 
