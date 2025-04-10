@@ -43,7 +43,7 @@ export default function ProductList(props) {
             {product.title}
           </p>
           <div className="mt-auto">
-          // In ProductList.jsx, update price display to:
+          
           <p className='text-gray-600'>${product.price.toFixed(2)}</p>
           </div>
           <div className='flex flex-row items-center text-center mt-4'>
