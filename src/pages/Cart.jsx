@@ -4,6 +4,12 @@ import ProductList from '../Components/ProductList';
 
 function Cart() {
   const cartProducts = useSelector((store) => store.cartReducer.cartProducts);
+  
+  // Calculate total price
+  const totalPrice = cartProducts.reduce(
+    (acc, product) => acc + (product.price * product.quantity),
+    0
+  );
 
   return (
     <div className="p-4">
@@ -19,6 +25,16 @@ function Cart() {
               <p>Total: ${(product.price * product.quantity).toFixed(2)}</p>
             </div>
           ))}
+          
+          {/* Add Total Price Section */}
+          <div className="mt-6 pt-4 border-t-2 border-gray-200">
+            <div className="flex justify-between items-center">
+              <span className="text-xl font-bold">Grand Total:</span>
+              <span className="text-xl font-bold">
+                ${totalPrice.toFixed(2)}
+              </span>
+            </div>
+          </div>
         </div>
       )}
     </div>
